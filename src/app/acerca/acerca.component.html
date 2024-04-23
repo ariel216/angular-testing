@@ -1,0 +1,14 @@
+<section>
+  <h2>Acerca de</h2>
+  <article>
+    <p>Prácticas Angular 15 {{ id }}</p>
+    <ul>
+      <li *ngFor="let item of tareas">
+        <span [ngClass]="{ done: item.done }">{{ item.tarea }}</span>
+      </li>
+    </ul>
+  </article>
+  <article>
+    <button (click)="goInit()">Inicio</button>
+  </article>
+</section>

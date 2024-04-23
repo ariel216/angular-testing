@@ -1,0 +1,9 @@
+<section>
+  <h2>Observers, subscribes</h2>
+  <button (click)="getData()">Listar</button>
+  <article>
+    <ul>
+      <li *ngFor="let item of products">{{ item.title }}</li>
+    </ul>
+  </article>
+</section>

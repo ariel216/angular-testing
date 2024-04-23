@@ -1,0 +1,22 @@
+<form #productForm="ngForm" (ngSubmit)="onSubmit(productForm)">
+  <div>
+    <label for="nombre">Nombre:</label>
+    <input name="nombre" type="text" required [(ngModel)]="nombre" />
+  </div>
+  <div>
+    <label for="precio">Precio:</label>
+    <input
+      name="precio"
+      type="number"
+      required
+      [min]="1"
+      [(ngModel)]="precio"
+    />
+  </div>
+  <button type="submit" [disabled]="!productForm.valid">Registrar</button>
+</form>
+
+<app-list-products
+  [productsListening]="products"
+  (editItemEvent)="editItem($event)"
+></app-list-products>

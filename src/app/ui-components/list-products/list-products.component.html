@@ -1,0 +1,12 @@
+<article>
+  <ul>
+    <li *ngFor="let item of productsListening">
+      {{ item.nombre | noWhiteSpaces }} | Precio:
+      <span [ngClass]="{ 'low-price': item.precio < 10 }">{{
+        item.precio | currency : "Bs.- "
+      }}</span>
+      | <button (click)="edit(item)">Editar</button> |
+      <button (click)="delete(item)">Quitar</button>
+    </li>
+  </ul>
+</article>
